@@ -18,38 +18,13 @@ public final class Constants {
     //ports
     //drive motors
     public static int c_frontRightMotor = 2;
-    public static int c_frontLeftMotor = 1;
-    public static int c_backRightMotor = 4;
-    // use to be 3 but I changed it for the actual 2022 robot 
-    public static int c_backLeftMotor = 3;
-    // use to be 4 but I changed it for the actual 2022 robot
-    //winch motor
-    public static int c_winchTalonMotor = 7;
-    public static int c_winchVictorMotor = 8;
-    //winch servo
-    public static int c_winchServo = 9;
-    //arm motor
-    public static int c_armMotor = 5;
-    //ball
-    public static int c_ballActuator = 0;
-    public static int c_ballServo = 1;
+    public static int c_backRightMotor = 1;
+    public static int c_frontLeftMotor = 3;
+    public static int c_backLeftMotor = 4;
+
     
     //joystick
     public static int c_joystickMain = 0;
     public static int c_joystickButton = 1;
-    
-    //drivetrain
-    public static double c_deadBand = 0.00;
-    public static double c_inputScaling = 1;
 
-    public static double c_driveSpeed = 0.6;
-    public static double c_turnSpeed = 0.6;
-
-    //actuator
-    public static double c_upperPostion = 0.75;
-    public static double c_lowerPostion = -0.50;
-
-    //ballServo
-    public static double c_upperAngle = 180;
-    public static double c_lowerAngle = 45;
 }

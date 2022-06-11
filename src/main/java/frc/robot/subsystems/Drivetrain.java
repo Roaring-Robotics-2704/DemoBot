@@ -5,28 +5,30 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
+import edu.wpi.first.wpilibj.motorcontrol.PWMVictorSPX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.InvertType;
-
-
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 public class Drivetrain extends SubsystemBase {
   /** Creates a new Drivetrain. */
     //Drive Train Motors
-    //Can change type later
-    private WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(Constants.c_frontLeftMotor);
-    private WPI_TalonSRX m_backLeft = new WPI_TalonSRX(Constants.c_backLeftMotor);
-    private WPI_TalonSRX m_frontRight = new WPI_TalonSRX(Constants.c_frontRightMotor);
-    private WPI_TalonSRX m_backRight = new WPI_TalonSRX(Constants.c_backRightMotor);
+    //Declare Motor Controllers 
+    //TalonSRXs
+    private WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(Constants.c_frontRightMotor);
+    private WPI_TalonSRX m_backLeft = new WPI_TalonSRX(Constants.c_backRightMotor);
+    //VictorSPX
+    private WPI_VictorSPX m_frontRight = new WPI_VictorSPX(Constants.c_frontLeftMotor);
+    private WPI_VictorSPX m_backRight = new WPI_VictorSPX(Constants.c_backLeftMotor);
 
     
     //Mecanum Drive Consturctor 
+    //need to make sure that the motor controller you declare works with speedcontroller
     private MecanumDrive drive = new MecanumDrive(m_frontLeft, m_backLeft, m_frontRight, m_backRight);
-
-  public Drivetrain() {
+ 
+    public Drivetrain() {
   }
 
   //Drive Method
@@ -37,7 +39,6 @@ public class Drivetrain extends SubsystemBase {
     //drive.driveCartesian(-strafeSpeed, movementSpeed, turningSpeed);
     //what we did for FRC 2020
     drive.driveCartesian(yAxisSpeed, -xAxisSpeed, zAxisSpeed);
-    
   }
 
   @Override
