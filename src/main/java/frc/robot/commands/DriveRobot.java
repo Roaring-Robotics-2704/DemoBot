@@ -32,9 +32,16 @@ public class DriveRobot extends CommandBase {
     //gety - along the y axis
     //getz - along the z axis
     //if the the dirrection are revrsed add a negative here
-    double joystickXInput = RobotContainer.joystickMain.getX();
-    double joystickYInput = RobotContainer.joystickMain.getY();
-    double joystickZInput = -RobotContainer.joystickMain.getZ();
+    double joystickXInput = -RobotContainer.joystickMain.getX();
+    double joystickYInput = -RobotContainer.joystickMain.getY();
+    double joystickZInput = RobotContainer.joystickMain.getZ();
+
+    //speed control
+    joystickXInput *= 0.5;
+    joystickYInput *= 0.5;
+    joystickZInput  *= 0.5;
+
+
     double deadzone = 0.2;
     double turnDeadzone = 0.25;
 
