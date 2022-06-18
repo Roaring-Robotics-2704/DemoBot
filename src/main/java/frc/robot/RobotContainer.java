@@ -9,10 +9,13 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+
 import frc.robot.commands.DriveRobot;
+import frc.robot.commands.GyroSense;
+import frc.robot.commands.PhotoelectricSense;
 import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.Gyroscope;
+import frc.robot.subsystems.PhotoelectricSensor;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -24,9 +27,13 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   //Subsytems defined
   public static Drivetrain m_driveTrain = new Drivetrain();
+  public static PhotoelectricSensor m_photoElectricSensor = new PhotoelectricSensor();
+  public static Gyroscope m_gyroscope = new Gyroscope();
 
   //Commands defined
   public static DriveRobot m_driveRobot = new DriveRobot();
+  public static PhotoelectricSense m_photoElectricSense = new PhotoelectricSense();
+  public static GyroSense m_gyroSense = new GyroSense();
 
   //OI defined
   public static Joystick joystickMain = new Joystick(Constants.c_joystickMain);

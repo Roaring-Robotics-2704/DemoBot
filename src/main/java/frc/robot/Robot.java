@@ -45,6 +45,21 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
+    //PhotoElecticSenor Values
+    SmartDashboard.putBoolean("PhotoElecticSensor", RobotContainer.m_photoElectricSensor.photoElecticSensor.get());
+    
+    //Gyro Values
+    SmartDashboard.putNumber("GyroScope Angle", RobotContainer.m_gyroscope.gyro.getAngle());
+    SmartDashboard.putNumber("GyroScope Angle X", RobotContainer.m_gyroscope.gyro.getGyroAngleX());
+    SmartDashboard.putNumber("GyroScope Angle Y", RobotContainer.m_gyroscope.gyro.getGyroAngleY());
+    SmartDashboard.putNumber("GyroScope Angle Z", RobotContainer.m_gyroscope.gyro.getGyroAngleZ());
+    SmartDashboard.putNumber("GyroScope Rate", RobotContainer.m_gyroscope.gyro.getRate());
+    SmartDashboard.putNumber("GyroScope Rate X", RobotContainer.m_gyroscope.gyro.getGyroRateX());
+    SmartDashboard.putNumber("GyroScope Rate Y", RobotContainer.m_gyroscope.gyro.getGyroRateY());
+    SmartDashboard.putNumber("GyroScope Rate Z", RobotContainer.m_gyroscope.gyro.getGyroRateZ());
+    SmartDashboard.putNumber("GyroScope Acceleration X", RobotContainer.m_gyroscope.gyro.getAccelX());
+    SmartDashboard.putNumber("GyroScope Acceleration Y", RobotContainer.m_gyroscope.gyro.getAccelY());
+    SmartDashboard.putNumber("GyroScope Acceleration Z", RobotContainer.m_gyroscope.gyro.getAccelZ());
   }
 
   /** This function is called once each time the robot enters Disabled mode. */
