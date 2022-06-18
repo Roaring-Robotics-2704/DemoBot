@@ -26,10 +26,12 @@ public class RobotContainer {
   //Subsytems defined
   public static Drivetrain m_driveTrain = new Drivetrain();
   public static HallEffectLatch m_latch = new HallEffectLatch();
+  public static HEanalog m_HEanalog = new HEanalog();
 
   //Commands defined
   public static DriveRobot m_driveRobot = new DriveRobot();
   public static HElatchCommand m_latchCommand = new HElatchCommand();
+  public static HEanalogCommand m_HEanalogCommand = new HEanalogCommand();
 
   //OI defined
   public static Joystick joystickMain = new Joystick(Constants.c_joystickMain);
@@ -50,6 +52,7 @@ public class RobotContainer {
     SmartDashboard.putData("Autonomous Mode", autoChooser);
 
     m_latch.setDefaultCommand(m_latchCommand);
+    m_HEanalog.setDefaultCommand(m_HEanalogCommand);
   }
 
   /**

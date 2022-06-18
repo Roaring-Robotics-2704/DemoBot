@@ -22,8 +22,13 @@ public final class Constants {
     public static int c_frontLeftMotor = 3;
     public static int c_backLeftMotor = 4;
 
+    //Hall Effect Lactch
     public static int c_latchPin = 0;
     
+    //Hall Effect Analog Sensor
+    public static int c_analogHEpin = 0;
+    public static double AnalogHEThreshold = 0.15;
+
     //joystick
     public static int c_joystickMain = 0;
     public static int c_joystickButton = 1;
