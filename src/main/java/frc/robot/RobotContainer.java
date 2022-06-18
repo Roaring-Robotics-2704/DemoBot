@@ -11,8 +11,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
-import frc.robot.commands.DriveRobot;
-import frc.robot.subsystems.Drivetrain;
+
+import frc.robot.commands.*;
+import frc.robot.subsystems.*;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -24,9 +25,11 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   //Subsytems defined
   public static Drivetrain m_driveTrain = new Drivetrain();
+  public static HallEffectLatch m_latch = new HallEffectLatch();
 
   //Commands defined
   public static DriveRobot m_driveRobot = new DriveRobot();
+  public static HElatchCommand m_latchCommand = new HElatchCommand();
 
   //OI defined
   public static Joystick joystickMain = new Joystick(Constants.c_joystickMain);
@@ -45,6 +48,8 @@ public class RobotContainer {
     autoChooser.setDefaultOption("Normal", true);
     autoChooser.addOption("Taxi Only", false);
     SmartDashboard.putData("Autonomous Mode", autoChooser);
+
+    m_latch.setDefaultCommand(m_latchCommand);
   }
 
   /**

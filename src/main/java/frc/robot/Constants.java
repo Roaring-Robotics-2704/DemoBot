@@ -22,6 +22,7 @@ public final class Constants {
     public static int c_frontLeftMotor = 3;
     public static int c_backLeftMotor = 4;
 
+    public static int c_latchPin = 0;
     
     //joystick
     public static int c_joystickMain = 0;
