@@ -15,7 +15,7 @@ public class HEanalog extends SubsystemBase {
   }
 
   public double getScaled() {
-      return (sensor.getVoltage() / 2.5) - 1; //0->5 scaled to -1 -> 1
+      return (sensor.getVoltage()/1) - 1; //0->2 scaled to -1 -> 1
   }
 
   public String getPole() {

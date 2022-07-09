@@ -23,7 +23,7 @@ public final class Constants {
     public static int c_backLeftMotor = 4;
 
     //Hall Effect Lactch
-    public static int c_latchPin = 0;
+    public static int c_latchPin = 9;
     
     //Hall Effect Analog Sensor
     public static int c_analogHEpin = 0;
