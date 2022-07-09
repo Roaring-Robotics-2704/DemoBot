@@ -4,12 +4,12 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.ADIS16448_IMU;
+import edu.wpi.first.wpilibj.ADIS16470_IMU;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Gyroscope extends SubsystemBase {
   /** Creates a new Gyroscope. */
-  public ADIS16448_IMU gyro = new ADIS16448_IMU();
+  public ADIS16470_IMU gyro = new ADIS16470_IMU();
 
   public Gyroscope() {}
 

@@ -50,16 +50,15 @@ public class Robot extends TimedRobot {
     
     //Gyro Values
     SmartDashboard.putNumber("GyroScope Angle", RobotContainer.m_gyroscope.gyro.getAngle());
-    SmartDashboard.putNumber("GyroScope Angle X", RobotContainer.m_gyroscope.gyro.getGyroAngleX());
-    SmartDashboard.putNumber("GyroScope Angle Y", RobotContainer.m_gyroscope.gyro.getGyroAngleY());
-    SmartDashboard.putNumber("GyroScope Angle Z", RobotContainer.m_gyroscope.gyro.getGyroAngleZ());
     SmartDashboard.putNumber("GyroScope Rate", RobotContainer.m_gyroscope.gyro.getRate());
-    SmartDashboard.putNumber("GyroScope Rate X", RobotContainer.m_gyroscope.gyro.getGyroRateX());
-    SmartDashboard.putNumber("GyroScope Rate Y", RobotContainer.m_gyroscope.gyro.getGyroRateY());
-    SmartDashboard.putNumber("GyroScope Rate Z", RobotContainer.m_gyroscope.gyro.getGyroRateZ());
+    SmartDashboard.putNumber("GyroScope Complementary Angle X", RobotContainer.m_gyroscope.gyro.getXComplementaryAngle());
+    SmartDashboard.putNumber("GyroScope Complementary Angle Y", RobotContainer.m_gyroscope.gyro.getYComplementaryAngle());
+    SmartDashboard.putNumber("GyroScope Filtered Acceleration X", RobotContainer.m_gyroscope.gyro.getXFilteredAccelAngle());
+    SmartDashboard.putNumber("GyroScope Filtered Acceleration Y", RobotContainer.m_gyroscope.gyro.getYFilteredAccelAngle());
     SmartDashboard.putNumber("GyroScope Acceleration X", RobotContainer.m_gyroscope.gyro.getAccelX());
     SmartDashboard.putNumber("GyroScope Acceleration Y", RobotContainer.m_gyroscope.gyro.getAccelY());
     SmartDashboard.putNumber("GyroScope Acceleration Z", RobotContainer.m_gyroscope.gyro.getAccelZ());
+    //SmartDashboard.putNumber("GyroScope Complementary Angle X", RobotContainer.m_gyroscope.gyro.getYawAxis());
   }
 
   /** This function is called once each time the robot enters Disabled mode. */
