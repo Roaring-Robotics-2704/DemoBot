@@ -47,10 +47,14 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
-
+    //Is a number between 0 and 4095, will need to scale it to figure out in inches or centemeters
+    /*double voltage_scale_factor = 5/RobotController.getVoltage5V();
+    double currentDistanceCentimeters = raw_value * voltage_scale_factor * 0.125;
+    double currentDistanceInches = raw_value * voltage_scale_factor * 0.0492;*/
     SmartDashboard.putNumber("Distance Value", RobotContainer.m_ultrasonic.ultrasonic.getValue());
     SmartDashboard.putNumber("Voltage Value", RobotContainer.m_ultrasonic.ultrasonic.getVoltage());
     SmartDashboard.putNumber("Average Value", RobotContainer.m_ultrasonic.ultrasonic.getAverageValue());
+    //Tells you have many pings it has sent out in totagl
     SmartDashboard.putNumber("Accumulator Value", RobotContainer.m_ultrasonic.ultrasonic.getAccumulatorCount());
     
   }
