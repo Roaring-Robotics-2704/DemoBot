@@ -13,7 +13,6 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.DriveRobot;
 import frc.robot.subsystems.Drivetrain;
-
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
  * "declarative" paradigm, very little robot logic should actually be handled in the {@link Robot}
@@ -42,9 +41,9 @@ public class RobotContainer {
 
     //Connects the subsystem to the command
     m_driveTrain.setDefaultCommand(m_driveRobot);
-    autoChooser.setDefaultOption("Normal", true);
-    autoChooser.addOption("Taxi Only", false);
-    SmartDashboard.putData("Autonomous Mode", autoChooser);
+   // autoChooser.setDefaultOption("Normal", true);
+   // autoChooser.addOption("Taxi Only", false);
+    //SmartDashboard.putData("Autonomous Mode", autoChooser);
   }
 
   /**

@@ -17,14 +17,12 @@ public final class Constants {
     //number that stay constant throughout the code
     //ports
     //drive motors
-    public static int c_frontRightMotor = 2;
-    public static int c_backRightMotor = 1;
-    public static int c_frontLeftMotor = 3;
-    public static int c_backLeftMotor = 4;
+    public static int c_frontRightMotorPort = 2;
+    public static int c_backRightMotorPort = 1;
+    public static int c_frontLeftMotorPort = 4;
+    public static int c_backLeftMotorPort = 3;
 
-    
-    //joystick
-    public static int c_joystickMain = 0;
-    public static int c_joystickButton = 1;
+   public static int c_joystickMain = 0;
+   public static int c_joystickButton = 1;
 
 }
