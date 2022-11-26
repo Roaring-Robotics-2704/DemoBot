@@ -14,7 +14,7 @@ import frc.robot.Constants;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
-public class Drivetrain extends SubsystemBase {
+public class DriveTrain extends SubsystemBase {
   /** Creates a new Drivetrain. */
     //Drive Train Motors
     //Declare Motor Controllers 
@@ -31,7 +31,7 @@ public class Drivetrain extends SubsystemBase {
 
   
  
-    public Drivetrain() {
+    public DriveTrain() {
   }
   public void arcadeDrive(double ySpeed, double zRotation){
     m_drive.arcadeDrive(ySpeed, zRotation);
