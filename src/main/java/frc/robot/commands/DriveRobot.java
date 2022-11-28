@@ -28,38 +28,13 @@ public class DriveRobot extends CommandBase {
 
   
   public void execute() {
-    //getx - along the x axis
-    //gety - along the y axis
-    //getz - along the z axis
-    //if the the dirrection are revrsed add a negative here
-    double joystickXInput = -RobotContainer.joystickMain.getX();
-    double joystickYInput = -RobotContainer.joystickMain.getY();
-    double joystickZInput = RobotContainer.joystickMain.getZ();
-
-    //speed control
-    joystickXInput *= 0.5;
-    joystickYInput *= 0.5;
-    joystickZInput  *= 0.5;
-
-
-    double deadzone = 0.2;
-    double turnDeadzone = 0.25;
-
-    if (Math.abs(RobotContainer.joystickMain.getX()) < deadzone) {
-      joystickXInput = 0;
-    } else if (Math.abs(RobotContainer.joystickMain.getY()) < deadzone) {
-      joystickYInput = 0;
-    } else if (Math.abs(RobotContainer.joystickMain.getZ()) < turnDeadzone) {
-      joystickZInput = 0;
-    }
+    double leftValue = RobotContainer.joystickMain.getY();
+    double rightValue = RobotContainer.joystickMain.getZ();
     
-    //call driveCartesion from Drive Train
-    //driveCartesian(double movementSpeed, double strafeSpeed, double turningSpeed)
-    //movementSpeed - speed along y axis, right is positive
-    //strafeSpeed - speed along x axis, forward is positive
-    //turningspeed - rotation rate around the z axis, clockwise is positve
-    RobotContainer.m_driveTrain.driveCartesian(joystickYInput, joystickXInput, joystickZInput);
-  }
+    RobotContainer.m_driveTrain.PID();
+    RobotContainer.m_driveTrain.arcadeDrive(0, RobotContainer.m_driveTrain.rcw);
+    
+   }
 
   // Called once the command ends or is interrupted.
   @Override
